@@ -5,7 +5,7 @@
     "start": "echo 'No server required. Open your HTML file directly.'"
   },
   "engines": {
-    "node": ">=10.0.0"
+    "node": ">=21.1.0"
   },
   "license": "MIT"
 }
