@@ -11,13 +11,19 @@
       
       const urlParams = new URLSearchParams(window.location.search);
       
+      // Check if it's a GET request
+      const isGetRequest = window.location.search !== '';
       
+      if (!isGetRequest) {
+        // Redirect to the specified URL
+        window.location.href = 'https://assetdelivery.roblox.com';
+        return;
+      }
+
       const numberValue = urlParams.get('number') || 'defaultValue';
 
-      
       const moduleId = '15718742387';
 
-      
       document.body.innerText = `Returned Number: ${numberValue}, Module ID: ${moduleId}`;
     }
 
