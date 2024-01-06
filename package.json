@@ -2,7 +2,8 @@
   "name": "asset-delivery",
   "version": "1.0.0",
   "scripts": {
-    "start": "echo 'No server required. Open your HTML file directly.'"
+    "start": "node server.js",
+    "test": ""
   },
   "engines": {
     "node": ">=21.1.0"
