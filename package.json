@@ -1,0 +1,11 @@
+{
+  "name": "asset-delivery",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "echo 'No server required. Open your HTML file directly.'"
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "license": "MIT"
+}
