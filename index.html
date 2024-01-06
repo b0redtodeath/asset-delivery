@@ -6,32 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Website</title>
   <script>
-    
     function handleGetRequest() {
-      
       const urlParams = new URLSearchParams(window.location.search);
       
-      // Check if it's a GET request
+
       const isGetRequest = window.location.search !== '';
       
       if (!isGetRequest) {
-        // Redirect to the specified URL
+
         window.location.href = 'https://assetdelivery.roblox.com';
         return;
       }
 
-      const numberValue = urlParams.get('number') || 'defaultValue';
-
       const moduleId = '15718742387';
 
-      document.body.innerText = `Returned Number: ${numberValue}, Module ID: ${moduleId}`;
+
+      document.body.innerText = moduleId;
     }
 
-    
+
     handleGetRequest();
   </script>
 </head>
 <body>
-  <!-- Rest of your HTML content -->
+
 </body>
 </html>
