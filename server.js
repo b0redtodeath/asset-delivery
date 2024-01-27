@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.send(moduleId);
   } else {
     // It's not a request from Roblox, redirect to "https://assetdelivery.roblox.com"
-    res.redirect('https://example.com');
+    res.redirect('https://assetdelivery.roblox.com');
   }
 });
 
