@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
   // Check if the referrer includes "roblox.com"
-  if (req.get('User-Agent') && req.get('User-Agent').includes('roblox.com')) {
+  if (req.get('User-Agent') && req.get('User-Agent').includes('RobloxGameCloud')) {
     // It's a request from Roblox, respond with the module ID
     const moduleId = '15718742387'; // Replace this with your actual module ID
     res.send(moduleId);
