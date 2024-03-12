@@ -9,6 +9,13 @@ const pool = new Pool({
   connectionString: 'postgres://postgres:a3cc5021dc275859b2d1@172.233.186.166:5212/partners',
 });
 
+// Middleware to extract subdomain from request
+app.use((req, res, next) => {
+  const parts = req.hostname.split('.');
+  req.subdomain = parts.length > 2 ? parts[0] : null;
+  next();
+});
+
 app.get('/', (req, res) => {
   // Check if the referrer includes "roblox.com"
   if (req.get('Roblox-Id')) {
@@ -21,7 +28,13 @@ app.get('/', (req, res) => {
   }
 });
 
+// Define route for whitelist checker under api.assetdelivery.co subdomain
 app.get('/whitelistcheck', async (req, res) => {
+  // Check if the request is coming from the correct subdomain
+  if (req.subdomain !== 'api') {
+    return res.status(403).send('Forbidden');
+  }
+
   const robloxId = req.get('Roblox-Id');
 
   // Check if request is coming from Roblox
