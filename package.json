@@ -6,12 +6,11 @@
     "test": ""
   },
   "engines": {
-    "node": ">=21.1"
+    "node": ">=21.1.0"
   },
   "dependencies": {
     "express": "^4.17.1",
-    "path": "^0.12.7",
-    "pg": "^8.0.0"
+    "path": "^0.12.7"
   },
   "license": "MIT"
 }
